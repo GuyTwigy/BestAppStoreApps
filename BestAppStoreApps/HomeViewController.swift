@@ -77,9 +77,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         cell.delegate = self
         cell.isFavorite = favArray.contains(where: {$0.name == paidAppsArray[indexPath.row].name})
         if cell.isFavorite {
-            cell.favoriteButton.setImage(UIImage(named: "purple_heart"), for: .normal)
+            cell.buttonImageView.image = (UIImage(named: "purple_heart"))
         } else {
-            cell.favoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
+            cell.buttonImageView.image = (UIImage(named: "empty_heart"))
         }
         
         return cell
