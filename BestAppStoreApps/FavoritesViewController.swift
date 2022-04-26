@@ -11,6 +11,7 @@ import UIKit
 class FavoritesViewController: UIViewController {
     
     var favArray: [Results] = []
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -28,6 +29,19 @@ class FavoritesViewController: UIViewController {
             collectionView.reloadData()
         }
     }
+    
+//    func showHideEmptyLabel() {
+//        emptyArrayLabel.isHidden = !favArray.isEmpty
+//        collectionView.isHidden = favArray.isEmpty
+//    }
+    
+    @IBAction func removeAllTapped(_ sender: Any) {
+        presentAlertWithAction(withTitle: "Are you sure??", message: "By tapping OK all the items will be cleared.", complition: {
+            self.favArray.removeAll()
+            UserDefaults.standard.favListSave = self.favArray
+            self.collectionView.reloadData()
+        })
+    }
 }
 
 extension FavoritesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -39,12 +53,13 @@ extension FavoritesViewController: UICollectionViewDelegate, UICollectionViewDat
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavCell.nibName, for: indexPath) as! FavCell
         cell.favArray = favArray
         cell.index = indexPath.row
+        cell.updateCellContent()
         cell.delegate = self
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (view.frame.width) / 2.3
+        let width = (view.frame.width) / 2.2
         return CGSize(width: width, height: width)
     }
 }

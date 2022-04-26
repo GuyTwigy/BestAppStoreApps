@@ -107,13 +107,12 @@
 				9D2803772815E9260080A446 /* Main.storyboard */,
 				9D2803752815E9260080A446 /* HomeViewController.swift */,
 				9D06307B28174256006FA54C /* FavoritesViewController.swift */,
-				9D441A0328188EED000BBCA9 /* FavCell.swift */,
-				9D441A0428188EED000BBCA9 /* FavCell.xib */,
 				9D06308A28175FD9006FA54C /* Extensions */,
 				9D2803882815EC060080A446 /* Models */,
 				9D2803852815EB200080A446 /* NetworkManager */,
 				9D441A0228188DBE000BBCA9 /* FreeCell */,
 				9D06307D281745F2006FA54C /* PaidCell */,
+				9D441A072818AAAA000BBCA9 /* FavCell */,
 				9D28037A2815E9270080A446 /* Assets.xcassets */,
 				9D28037C2815E9270080A446 /* LaunchScreen.storyboard */,
 				9D28037F2815E9270080A446 /* Info.plist */,
@@ -144,6 +143,15 @@
 				9D4419FF281821E7000BBCA9 /* FreeCell.xib */,
 			);
 			path = FreeCell;
+			sourceTree = "<group>";
+		};
+		9D441A072818AAAA000BBCA9 /* FavCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D441A0328188EED000BBCA9 /* FavCell.swift */,
+				9D441A0428188EED000BBCA9 /* FavCell.xib */,
+			);
+			path = FavCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

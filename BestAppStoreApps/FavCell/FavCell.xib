@@ -20,18 +20,27 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9h-89-e9x">
                         <rect key="frame" x="5" y="5" width="268" height="218"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qto-tS-F4n">
-                                <rect key="frame" x="5" y="5" width="258" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qto-tS-F4n">
+                                <rect key="frame" x="59" y="5" width="150" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="vKy-4T-Z12"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OPU-BQ-8Hq">
-                                <rect key="frame" x="14" y="47" width="240" height="123"/>
+                                <rect key="frame" x="34" y="46.5" width="200" height="123.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ZPr-jL-nTK"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpy-vy-s5N">
-                                <rect key="frame" x="30" y="178" width="208" height="32"/>
+                                <rect key="frame" x="64" y="178" width="140" height="32"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="B81-j8-Yqf"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Remove from list">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
@@ -55,17 +64,31 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qto-tS-F4n" firstAttribute="leading" secondItem="F9h-89-e9x" secondAttribute="leading" constant="5" id="4D3-zF-zDb"/>
-                            <constraint firstAttribute="trailing" secondItem="qto-tS-F4n" secondAttribute="trailing" constant="5" id="67S-la-yro"/>
-                            <constraint firstItem="OPU-BQ-8Hq" firstAttribute="leading" secondItem="F9h-89-e9x" secondAttribute="leading" constant="14" id="9ri-Nj-LOC"/>
-                            <constraint firstAttribute="trailing" secondItem="Mpy-vy-s5N" secondAttribute="trailing" constant="30" id="HwX-sq-Sio"/>
+                            <constraint firstItem="OPU-BQ-8Hq" firstAttribute="centerX" secondItem="F9h-89-e9x" secondAttribute="centerX" id="7Tm-yb-iNK"/>
                             <constraint firstItem="OPU-BQ-8Hq" firstAttribute="top" secondItem="qto-tS-F4n" secondAttribute="bottom" constant="21" id="Oxh-Kb-j9y"/>
                             <constraint firstAttribute="bottom" secondItem="Mpy-vy-s5N" secondAttribute="bottom" constant="8" id="QPl-v5-BKb"/>
-                            <constraint firstItem="Mpy-vy-s5N" firstAttribute="leading" secondItem="F9h-89-e9x" secondAttribute="leading" constant="30" id="S8A-nh-caE"/>
                             <constraint firstItem="qto-tS-F4n" firstAttribute="top" secondItem="F9h-89-e9x" secondAttribute="top" constant="5" id="idH-9F-uaj"/>
-                            <constraint firstAttribute="trailing" secondItem="OPU-BQ-8Hq" secondAttribute="trailing" constant="14" id="pdT-h5-xoF"/>
+                            <constraint firstItem="qto-tS-F4n" firstAttribute="centerX" secondItem="F9h-89-e9x" secondAttribute="centerX" id="syg-8k-dcG"/>
                             <constraint firstItem="Mpy-vy-s5N" firstAttribute="top" secondItem="OPU-BQ-8Hq" secondAttribute="bottom" constant="8" id="tw5-Wm-cvM"/>
+                            <constraint firstItem="Mpy-vy-s5N" firstAttribute="centerX" secondItem="F9h-89-e9x" secondAttribute="centerX" id="xor-IK-4hN"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="1" height="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>

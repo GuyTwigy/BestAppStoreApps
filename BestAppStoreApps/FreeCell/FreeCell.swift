@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FreeCellDelegate {
-    func passDataFree(favArray: [Results], index: Int, remove: Bool)
+    func passDataFree(index: Int, remove: Bool)
 }
 
 class FreeCell: UICollectionViewCell {
@@ -36,10 +36,10 @@ class FreeCell: UICollectionViewCell {
     @objc func favTapped() {
         if isFav {
             favoriteImage.image = UIImage(named: "empty_heart")
-            delegate?.passDataFree(favArray: favArray, index: index, remove: true)
+            delegate?.passDataFree(index: index, remove: true)
         } else {
             favoriteImage.image = UIImage(named: "purple_heart")
-            delegate?.passDataFree(favArray: favArray, index: index, remove: false)
+            delegate?.passDataFree(index: index, remove: false)
         }
         isFav = !isFav
     }

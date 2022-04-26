@@ -30,6 +30,7 @@ class FavCell: UICollectionViewCell {
     
     @IBAction func remove(_ sender: UIButton) {
         favArray.remove(at: index)
+        UserDefaults.standard.favListSave = favArray
         delegate?.updateFavArray(favArray: favArray)
     }
 }

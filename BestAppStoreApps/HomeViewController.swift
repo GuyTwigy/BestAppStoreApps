@@ -22,12 +22,20 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUpCollectionAndTableViews()
         paidLoader.startAnimating()
         getPaid()
         freeLoader.startAnimating()
         getFreeApps()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let fav = UserDefaults.standard.favListSave {
+            favArray = fav
+        }
+        collectionView.reloadData()
+        tableView.reloadData()
     }
     
     func setUpCollectionAndTableViews() {
@@ -85,6 +93,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.index = indexPath.row
         cell.updateCellContent()
         cell.delegate = self
+        cell.isFav = favArray.contains(where: {$0.name == freeAppsArray[indexPath.row].name})
+        if cell.isFav {
+            cell.favoriteImage.image = (UIImage(named: "purple_heart"))
+        } else {
+            cell.favoriteImage.image = (UIImage(named: "empty_heart"))
+        }
         
         return cell
     }
@@ -96,18 +110,17 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 }
 
 extension HomeViewController: FreeCellDelegate {
-    func passDataFree(favArray: [Results], index: Int, remove: Bool) {
-        self.favArray = favArray
+    func passDataFree(index: Int, remove: Bool) {
         if remove {
-            if favArray.contains(where: {$0.name == paidAppsArray[index].name}) {
-                let filtered  = favArray.filter({$0.name != paidAppsArray[index].name})
-                self.favArray = filtered
-                UserDefaults.standard.favListSave = self.favArray
+            if favArray.contains(where: {$0.name == freeAppsArray[index].name}) {
+                let filteredArr  = favArray.filter({$0.name != freeAppsArray[index].name})
+                favArray = filteredArr
+                UserDefaults.standard.favListSave = favArray
             }
         } else {
-            if !favArray.contains(where: {$0.name == paidAppsArray[index].name}) {
-                self.favArray.append(paidAppsArray[index])
-                UserDefaults.standard.favListSave = self.favArray
+            if !favArray.contains(where: {$0.name == freeAppsArray[index].name}) {
+                favArray.append(freeAppsArray[index])
+                UserDefaults.standard.favListSave = favArray
             }
         }
     }
@@ -140,18 +153,17 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension HomeViewController: PaidCellDelegate {
-    func passDataPaid(favArray: [Results], index: Int, remove: Bool) {
-        self.favArray = favArray
+    func passDataPaid(index: Int, remove: Bool) {
         if remove {
             if favArray.contains(where: {$0.name == paidAppsArray[index].name}) {
                 let filtered  = favArray.filter({$0.name != paidAppsArray[index].name})
-                self.favArray = filtered
-                UserDefaults.standard.favListSave = self.favArray
+                favArray = filtered
+                UserDefaults.standard.favListSave = favArray
             }
         } else {
             if !favArray.contains(where: {$0.name == paidAppsArray[index].name}) {
-                self.favArray.append(paidAppsArray[index])
-                UserDefaults.standard.favListSave = self.favArray
+                favArray.append(paidAppsArray[index])
+                UserDefaults.standard.favListSave = favArray
             }
         }
     }
