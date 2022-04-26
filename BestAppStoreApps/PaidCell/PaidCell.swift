@@ -59,7 +59,7 @@ class PaidCell: UITableViewCell {
             delegate?.passDataPaid(index: index, remove: true)
         } else {
 //            animationForFavotite()
-            buttonImageView.image = (UIImage(named: "purple_heart"))
+            animationForFavotite()
             delegate?.passDataPaid(index: index, remove: false)
         }
         isFavorite = !isFavorite

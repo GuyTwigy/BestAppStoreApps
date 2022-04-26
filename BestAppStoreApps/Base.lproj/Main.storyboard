@@ -143,17 +143,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKu-B6-fhw">
-                                <rect key="frame" x="51" y="348" width="312" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="d2R-WZ-gYt"/>
-                                </constraints>
-                                <string key="text">Your favorite list is empty.
- Go ahead and fill it.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="70A-Re-NnO">
                                 <rect key="frame" x="10" y="180" width="394" height="633"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -194,18 +183,27 @@
                                     <action selector="removeAllTapped:" destination="X3z-N7-6hE" eventType="touchUpInside" id="9ig-Tx-6Jf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JD-p3-kso">
+                                <rect key="frame" x="30" y="280" width="354" height="72"/>
+                                <string key="text">Your favorite list is empty.
+Go ahead and fill it.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lxm-dV-RtZ"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="KKu-B6-fhw" firstAttribute="centerY" secondItem="gk3-wq-VGn" secondAttribute="centerY" id="0Hf-ow-DHv"/>
                             <constraint firstItem="Lxm-dV-RtZ" firstAttribute="trailing" secondItem="70A-Re-NnO" secondAttribute="trailing" constant="10" id="7Dn-Do-uMN"/>
+                            <constraint firstItem="0JD-p3-kso" firstAttribute="top" secondItem="im0-Mn-RI2" secondAttribute="bottom" constant="150" id="Ads-Fs-0FU"/>
                             <constraint firstItem="70A-Re-NnO" firstAttribute="leading" secondItem="Lxm-dV-RtZ" secondAttribute="leading" constant="10" id="BgE-u2-FOo"/>
-                            <constraint firstItem="KKu-B6-fhw" firstAttribute="centerX" secondItem="Lxm-dV-RtZ" secondAttribute="centerX" id="OsP-Zg-Ctj"/>
+                            <constraint firstItem="0JD-p3-kso" firstAttribute="leading" secondItem="Lxm-dV-RtZ" secondAttribute="leading" constant="30" id="NeO-Ol-Yu1"/>
                             <constraint firstItem="5ds-ed-ak8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lxm-dV-RtZ" secondAttribute="leading" symbolic="YES" id="UrH-ba-fpE"/>
                             <constraint firstItem="Lxm-dV-RtZ" firstAttribute="bottom" secondItem="70A-Re-NnO" secondAttribute="bottom" id="V5a-1h-Pg4"/>
                             <constraint firstItem="im0-Mn-RI2" firstAttribute="top" secondItem="Lxm-dV-RtZ" secondAttribute="top" constant="50" id="aIP-af-NYl"/>
                             <constraint firstItem="Lxm-dV-RtZ" firstAttribute="trailing" secondItem="5ds-ed-ak8" secondAttribute="trailing" constant="20" id="g9x-pp-pha"/>
+                            <constraint firstItem="Lxm-dV-RtZ" firstAttribute="trailing" secondItem="0JD-p3-kso" secondAttribute="trailing" constant="30" id="kGK-6r-QcH"/>
                             <constraint firstItem="im0-Mn-RI2" firstAttribute="centerX" secondItem="Lxm-dV-RtZ" secondAttribute="centerX" id="pR2-a5-Qce"/>
                             <constraint firstItem="70A-Re-NnO" firstAttribute="top" secondItem="im0-Mn-RI2" secondAttribute="bottom" constant="50" id="pz9-kK-2ZK"/>
                             <constraint firstItem="im0-Mn-RI2" firstAttribute="top" secondItem="5ds-ed-ak8" secondAttribute="bottom" constant="10" id="vHG-0K-LeJ"/>
@@ -215,8 +213,8 @@
                         <imageReference key="image" image="heart.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="arrayEmptyIndicationLabel" destination="0JD-p3-kso" id="Zvy-cR-7Th"/>
                         <outlet property="collectionView" destination="70A-Re-NnO" id="ho3-hK-0Q8"/>
-                        <outlet property="emptyArrayLabel" destination="70A-Re-NnO" id="KsY-ye-uiP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2O2-ru-KaI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

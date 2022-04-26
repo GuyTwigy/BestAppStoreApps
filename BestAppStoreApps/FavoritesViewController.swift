@@ -12,6 +12,7 @@ class FavoritesViewController: UIViewController {
     
     var favArray: [Results] = []
     
+    @IBOutlet weak var arrayEmptyIndicationLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -28,18 +29,20 @@ class FavoritesViewController: UIViewController {
             favArray = fav
             collectionView.reloadData()
         }
+        showHideEmptyLabel()
     }
     
-//    func showHideEmptyLabel() {
-//        emptyArrayLabel.isHidden = !favArray.isEmpty
-//        collectionView.isHidden = favArray.isEmpty
-//    }
+    func showHideEmptyLabel() {
+        arrayEmptyIndicationLabel.isHidden = !favArray.isEmpty
+        collectionView.isHidden = favArray.isEmpty
+    }
     
     @IBAction func removeAllTapped(_ sender: Any) {
         presentAlertWithAction(withTitle: "Are you sure??", message: "By tapping OK all the items will be cleared.", complition: {
             self.favArray.removeAll()
             UserDefaults.standard.favListSave = self.favArray
             self.collectionView.reloadData()
+            self.showHideEmptyLabel()
         })
     }
 }
@@ -69,6 +72,7 @@ extension FavoritesViewController: FavCellDelegate {
         self.favArray = favArray
         UserDefaults.standard.favListSave = self.favArray
         collectionView.reloadData()
+        showHideEmptyLabel()
     }
 }
 
