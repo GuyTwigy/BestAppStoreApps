@@ -8,7 +8,7 @@
 import UIKit
 
 protocol PaidCellDelegate {
-    func passData(favArray: [Results], index: Int, remove: Bool)
+    func passDataPaid(favArray: [Results], index: Int, remove: Bool)
 }
 
 class PaidCell: UITableViewCell {
@@ -22,10 +22,10 @@ class PaidCell: UITableViewCell {
     
     @IBOutlet weak var appName: UILabel!
     @IBOutlet weak var appImageView: UIImageView!
-    @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var buttonImageView: UIImageView!
     
     func updateCellContent() {
+        addTapGesture()
         appName.text = paidArray[index].name
         appImageView.image = UIImage(url: URL(string: paidArray[index].artworkUrl100))
         if isFavorite {
@@ -33,6 +33,11 @@ class PaidCell: UITableViewCell {
         } else {
             buttonImageView.image = (UIImage(named: "empty_heart"))
         }
+    }
+    
+    func addTapGesture() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(favoriteTapped))
+        buttonImageView.addGestureRecognizer(tap)
     }
     
     func animationForFavotite() {
@@ -56,13 +61,16 @@ class PaidCell: UITableViewCell {
         }
     }
     
-    @IBAction func favoriteTapped(_ sender: Any) {
+    @objc func favoriteTapped() {
         if isFavorite {
-            delegate?.passData(favArray: favArray, index: index, remove: true)
+            buttonImageView.image = (UIImage(named: "empty_heart"))
+            delegate?.passDataPaid(favArray: favArray, index: index, remove: true)
         } else {
-            animationForFavotite()
-            delegate?.passData(favArray: favArray, index: index, remove: false)
+//            animationForFavotite()
+            buttonImageView.image = (UIImage(named: "purple_heart"))
+            delegate?.passDataPaid(favArray: favArray, index: index, remove: false)
         }
+        isFavorite = !isFavorite
     }
 }
 

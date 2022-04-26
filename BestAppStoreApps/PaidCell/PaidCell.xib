@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="117" id="KGk-i7-Jjw" customClass="PaidCell" customModule="BestAppStoreApps" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaidCell" rowHeight="117" id="KGk-i7-Jjw" customClass="PaidCell" customModule="BestAppStoreApps" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="431" height="117"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -24,14 +24,14 @@
                                 <rect key="frame" x="5" y="5" width="421" height="107"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ptS-SW-bzs">
-                                        <rect key="frame" x="5" y="3.5" width="100" height="100"/>
+                                        <rect key="frame" x="20" y="23.5" width="60" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="FXy-Zg-Ndr"/>
-                                            <constraint firstAttribute="width" constant="100" id="jBF-2z-5ow"/>
+                                            <constraint firstAttribute="height" constant="60" id="FXy-Zg-Ndr"/>
+                                            <constraint firstAttribute="width" constant="60" id="jBF-2z-5ow"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRj-NZ-G6Y">
-                                        <rect key="frame" x="125" y="13.5" width="211" height="80"/>
+                                        <rect key="frame" x="100" y="13.5" width="236" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="O73-Sc-17C"/>
                                         </constraints>
@@ -39,7 +39,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_heart" translatesAutoresizingMaskIntoConstraints="NO" id="1pn-jw-eyK">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_heart" translatesAutoresizingMaskIntoConstraints="NO" id="1pn-jw-eyK">
                                         <rect key="frame" x="346" y="31" width="45" height="45"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -47,33 +47,16 @@
                                             <constraint firstAttribute="width" constant="45" id="Ofz-OO-kX4"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQp-Z1-WV8">
-                                        <rect key="frame" x="346" y="31" width="45" height="45"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="XXM-PA-PEY"/>
-                                            <constraint firstAttribute="width" constant="45" id="x3M-9X-qaa"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain"/>
-                                        <connections>
-                                            <action selector="favoriteTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="fMX-MD-zoE"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="dRj-NZ-G6Y" firstAttribute="centerY" secondItem="n56-1h-D9s" secondAttribute="centerY" id="6M6-Q1-dzo"/>
                                     <constraint firstItem="ptS-SW-bzs" firstAttribute="centerY" secondItem="n56-1h-D9s" secondAttribute="centerY" id="7ZP-KM-bDq"/>
-                                    <constraint firstItem="ptS-SW-bzs" firstAttribute="leading" secondItem="n56-1h-D9s" secondAttribute="leading" constant="5" id="9nY-YD-t96"/>
-                                    <constraint firstAttribute="trailing" secondItem="lQp-Z1-WV8" secondAttribute="trailing" constant="30" id="Jxy-wb-268"/>
-                                    <constraint firstItem="lQp-Z1-WV8" firstAttribute="leading" secondItem="dRj-NZ-G6Y" secondAttribute="trailing" constant="10" id="Mio-iL-fXg"/>
+                                    <constraint firstItem="ptS-SW-bzs" firstAttribute="leading" secondItem="n56-1h-D9s" secondAttribute="leading" constant="20" id="9nY-YD-t96"/>
                                     <constraint firstItem="dRj-NZ-G6Y" firstAttribute="leading" secondItem="ptS-SW-bzs" secondAttribute="trailing" constant="20" id="O1G-Uw-ooH"/>
                                     <constraint firstAttribute="trailing" secondItem="1pn-jw-eyK" secondAttribute="trailing" constant="30" id="aG3-zU-cBR"/>
                                     <constraint firstItem="1pn-jw-eyK" firstAttribute="leading" secondItem="dRj-NZ-G6Y" secondAttribute="trailing" constant="10" id="f6I-lQ-9iW"/>
-                                    <constraint firstItem="dRj-NZ-G6Y" firstAttribute="leading" secondItem="ptS-SW-bzs" secondAttribute="trailing" constant="20" id="tag-iO-Dt8"/>
                                     <constraint firstItem="1pn-jw-eyK" firstAttribute="centerY" secondItem="n56-1h-D9s" secondAttribute="centerY" id="uc1-sq-hdE"/>
-                                    <constraint firstItem="lQp-Z1-WV8" firstAttribute="centerY" secondItem="n56-1h-D9s" secondAttribute="centerY" id="ueG-DI-Joi"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -127,7 +110,6 @@
                 <outlet property="appImageView" destination="ptS-SW-bzs" id="pDW-Bx-S9c"/>
                 <outlet property="appName" destination="dRj-NZ-G6Y" id="G2X-nR-6tW"/>
                 <outlet property="buttonImageView" destination="1pn-jw-eyK" id="j3m-Di-t4P"/>
-                <outlet property="favoriteButton" destination="lQp-Z1-WV8" id="tZu-xP-XdN"/>
             </connections>
             <point key="canvasLocation" x="218.11594202898553" y="148.32589285714286"/>
         </tableViewCell>

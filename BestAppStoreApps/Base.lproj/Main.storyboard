@@ -25,9 +25,33 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gx7-eA-txR">
                                 <rect key="frame" x="5" y="127" width="409" height="180"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qGv-O4-Qi9">
+                                        <rect key="frame" x="0.0" y="0.0" width="409" height="180"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ogc-Za-nSk">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="estimatedItemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="7d3-0e-0xW">
+                                        <rect key="frame" x="186" y="71.5" width="37" height="37"/>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="7d3-0e-0xW" firstAttribute="centerX" secondItem="gx7-eA-txR" secondAttribute="centerX" id="BQT-fJ-dC5"/>
+                                    <constraint firstAttribute="bottom" secondItem="qGv-O4-Qi9" secondAttribute="bottom" id="CMW-p3-qhK"/>
+                                    <constraint firstAttribute="trailing" secondItem="qGv-O4-Qi9" secondAttribute="trailing" id="ElE-L7-Sps"/>
+                                    <constraint firstItem="qGv-O4-Qi9" firstAttribute="leading" secondItem="gx7-eA-txR" secondAttribute="leading" id="g0B-5X-UeY"/>
+                                    <constraint firstItem="7d3-0e-0xW" firstAttribute="centerY" secondItem="gx7-eA-txR" secondAttribute="centerY" id="iVq-6j-eI4"/>
                                     <constraint firstAttribute="height" constant="180" id="oFJ-Ok-jwW"/>
+                                    <constraint firstItem="qGv-O4-Qi9" firstAttribute="top" secondItem="gx7-eA-txR" secondAttribute="top" id="pGk-SP-8S8"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Paid Apps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ra6-b5-5uf">
@@ -76,6 +100,8 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="carouselView" destination="gx7-eA-txR" id="eFt-cT-83d"/>
+                        <outlet property="collectionView" destination="qGv-O4-Qi9" id="SKk-Y8-VE3"/>
+                        <outlet property="freeLoader" destination="7d3-0e-0xW" id="Red-xx-Jxh"/>
                         <outlet property="paidLoader" destination="3qJ-AY-SEM" id="yND-06-BZR"/>
                         <outlet property="tableView" destination="ywu-cX-NJ5" id="aIg-gQ-MpI"/>
                     </connections>
@@ -110,12 +136,42 @@
                     <view key="view" contentMode="scaleToFill" id="gk3-wq-VGn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Favorites App List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="im0-Mn-RI2">
+                                <rect key="frame" x="69" y="94" width="276.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="70A-Re-NnO">
+                                <rect key="frame" x="0.0" y="180" width="414" height="633"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IkQ-1u-57E">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Lxm-dV-RtZ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Lxm-dV-RtZ" firstAttribute="trailing" secondItem="70A-Re-NnO" secondAttribute="trailing" id="7Dn-Do-uMN"/>
+                            <constraint firstItem="70A-Re-NnO" firstAttribute="leading" secondItem="Lxm-dV-RtZ" secondAttribute="leading" id="BgE-u2-FOo"/>
+                            <constraint firstItem="Lxm-dV-RtZ" firstAttribute="bottom" secondItem="70A-Re-NnO" secondAttribute="bottom" id="V5a-1h-Pg4"/>
+                            <constraint firstItem="im0-Mn-RI2" firstAttribute="top" secondItem="Lxm-dV-RtZ" secondAttribute="top" constant="50" id="aIP-af-NYl"/>
+                            <constraint firstItem="im0-Mn-RI2" firstAttribute="centerX" secondItem="Lxm-dV-RtZ" secondAttribute="centerX" id="pR2-a5-Qce"/>
+                            <constraint firstItem="70A-Re-NnO" firstAttribute="top" secondItem="im0-Mn-RI2" secondAttribute="bottom" constant="50" id="pz9-kK-2ZK"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorites" id="8MY-d7-ymZ">
                         <imageReference key="image" image="heart.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="collectionView" destination="70A-Re-NnO" id="ho3-hK-0Q8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2O2-ru-KaI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
