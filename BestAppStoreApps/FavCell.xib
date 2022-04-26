@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FavCell" customModule="BestAppStoreApps" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="278" height="228"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="278" height="228"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9h-89-e9x">
+                        <rect key="frame" x="5" y="5" width="268" height="218"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qto-tS-F4n">
+                                <rect key="frame" x="5" y="5" width="258" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OPU-BQ-8Hq">
+                                <rect key="frame" x="14" y="47" width="240" height="123"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpy-vy-s5N">
+                                <rect key="frame" x="30" y="178" width="208" height="32"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Remove from list">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="remove:" destination="gTV-IL-0wX" eventType="touchUpInside" id="hF1-y3-BL4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qto-tS-F4n" firstAttribute="leading" secondItem="F9h-89-e9x" secondAttribute="leading" constant="5" id="4D3-zF-zDb"/>
+                            <constraint firstAttribute="trailing" secondItem="qto-tS-F4n" secondAttribute="trailing" constant="5" id="67S-la-yro"/>
+                            <constraint firstItem="OPU-BQ-8Hq" firstAttribute="leading" secondItem="F9h-89-e9x" secondAttribute="leading" constant="14" id="9ri-Nj-LOC"/>
+                            <constraint firstAttribute="trailing" secondItem="Mpy-vy-s5N" secondAttribute="trailing" constant="30" id="HwX-sq-Sio"/>
+                            <constraint firstItem="OPU-BQ-8Hq" firstAttribute="top" secondItem="qto-tS-F4n" secondAttribute="bottom" constant="21" id="Oxh-Kb-j9y"/>
+                            <constraint firstAttribute="bottom" secondItem="Mpy-vy-s5N" secondAttribute="bottom" constant="8" id="QPl-v5-BKb"/>
+                            <constraint firstItem="Mpy-vy-s5N" firstAttribute="leading" secondItem="F9h-89-e9x" secondAttribute="leading" constant="30" id="S8A-nh-caE"/>
+                            <constraint firstItem="qto-tS-F4n" firstAttribute="top" secondItem="F9h-89-e9x" secondAttribute="top" constant="5" id="idH-9F-uaj"/>
+                            <constraint firstAttribute="trailing" secondItem="OPU-BQ-8Hq" secondAttribute="trailing" constant="14" id="pdT-h5-xoF"/>
+                            <constraint firstItem="Mpy-vy-s5N" firstAttribute="top" secondItem="OPU-BQ-8Hq" secondAttribute="bottom" constant="8" id="tw5-Wm-cvM"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="F9h-89-e9x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="RTP-Nt-VVl"/>
+                <constraint firstAttribute="bottom" secondItem="F9h-89-e9x" secondAttribute="bottom" constant="5" id="bT9-BF-iqy"/>
+                <constraint firstAttribute="trailing" secondItem="F9h-89-e9x" secondAttribute="trailing" constant="5" id="gVX-Wv-FFs"/>
+                <constraint firstItem="F9h-89-e9x" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="tbh-As-DbM"/>
+            </constraints>
+            <size key="customSize" width="278" height="228"/>
+            <connections>
+                <outlet property="appImageView" destination="OPU-BQ-8Hq" id="ihx-8g-oUX"/>
+                <outlet property="appName" destination="qto-tS-F4n" id="vgm-hW-3Wq"/>
+            </connections>
+            <point key="canvasLocation" x="166.66666666666669" y="180.13392857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
