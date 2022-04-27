@@ -20,9 +20,10 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9h-89-e9x">
                         <rect key="frame" x="5" y="5" width="268" height="218"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qto-tS-F4n">
-                                <rect key="frame" x="59" y="10" width="150" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qto-tS-F4n">
+                                <rect key="frame" x="59" y="10" width="150" height="50"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Mh7-F7-5av"/>
                                     <constraint firstAttribute="width" constant="150" id="vKy-4T-Z12"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -30,7 +31,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OPU-BQ-8Hq">
-                                <rect key="frame" x="79" y="45.5" width="110" height="124.5"/>
+                                <rect key="frame" x="79" y="75" width="110" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="ZPr-jL-nTK"/>
                                 </constraints>
