@@ -68,5 +68,4 @@ class FreeCell: UICollectionViewCell {
         }
         isFav = !isFav
     }
-    
 }
