@@ -9,16 +9,22 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+// MARK: Properties
+    
     var freeAppsArray: [Results] = []
     var paidAppsArray: [Results] = []
     var favArray: [Results] = []
     var cellHeight = 80.0
+    
+// MARK: Outlets
     
     @IBOutlet weak var carouselView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var freeLoader: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var paidLoader: UIActivityIndicatorView!
+    
+// MARK: VC Lifecicle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +43,8 @@ class HomeViewController: UIViewController {
         collectionView.reloadData()
         tableView.reloadData()
     }
+    
+// MARK: Methods
     
     func setUpCollectionAndTableViews() {
         collectionView.delegate = self
@@ -79,8 +87,17 @@ class HomeViewController: UIViewController {
             }
         }
     }
+    
+    func shareApp(urlString: String) {
+        if let shareURL = NSURL(string: urlString), let shareData = NSData(contentsOf: shareURL as URL) {
+            let firstActivityItem: Array = [shareData]
+            let activityViewController = UIActivityViewController(activityItems: firstActivityItem, applicationActivities: nil)
+            present(activityViewController, animated: true, completion: nil)
+        }
+    }
 }
 
+// MARK: Free Apps collectionView
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -107,6 +124,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let width = (view.frame.width) / 1.5
         return CGSize(width: width, height: width)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        shareApp(urlString: freeAppsArray[indexPath.row].url)
+    }
 }
 
 extension HomeViewController: FreeCellDelegate {
@@ -126,6 +147,7 @@ extension HomeViewController: FreeCellDelegate {
     }
 }
 
+// MARK: Paid Apps tableView
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -149,6 +171,10 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         cellHeight
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        shareApp(urlString: paidAppsArray[indexPath.row].url)
     }
 }
 

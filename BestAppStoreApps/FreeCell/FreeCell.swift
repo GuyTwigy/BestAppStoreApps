@@ -13,6 +13,8 @@ protocol FreeCellDelegate {
 
 class FreeCell: UICollectionViewCell {
 
+// MARK: Properties & Outlets
+    
     static let nibName = "FreeCell"
     var freeArray: [Results] = []
     var favArray: [Results] = []
@@ -25,6 +27,8 @@ class FreeCell: UICollectionViewCell {
     @IBOutlet weak var appImage: UIImageView!
     
     
+// MARK: Methods
+    
     func updateCellContent() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(favTapped))
         favoriteImage.addGestureRecognizer(tap)
@@ -33,12 +37,33 @@ class FreeCell: UICollectionViewCell {
         appImage.image = UIImage(url: URL(string: freeArray[index].artworkUrl100))
     }
     
+    func animationForFavotite() {
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+            self.favoriteImage.image = (UIImage(named: "purple_heart"))
+            self.favoriteImage.transform = CGAffineTransform(rotationAngle: .pi)
+        }) { _ in
+            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+                self.favoriteImage.transform = .identity
+            }) { _ in
+                UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
+                    self.favoriteImage.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+                }) { _ in
+                    UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
+                        self.favoriteImage.transform = .identity
+                    })
+                }
+            }
+        }
+    }
+
+// MARK: Actions
+    
     @objc func favTapped() {
         if isFav {
             favoriteImage.image = UIImage(named: "empty_heart")
             delegate?.passDataFree(index: index, remove: true)
         } else {
-            favoriteImage.image = UIImage(named: "purple_heart")
+            animationForFavotite()
             delegate?.passDataFree(index: index, remove: false)
         }
         isFav = !isFav

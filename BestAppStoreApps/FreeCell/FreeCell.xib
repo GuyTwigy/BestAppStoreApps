@@ -21,7 +21,7 @@
                         <rect key="frame" x="5" y="5" width="314" height="198"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_heart" translatesAutoresizingMaskIntoConstraints="NO" id="LET-Wa-SFg">
-                                <rect key="frame" x="5" y="5" width="45" height="45"/>
+                                <rect key="frame" x="10" y="10" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="p12-wV-WXZ"/>
                                     <constraint firstAttribute="height" constant="45" id="wbK-sQ-eHK"/>
@@ -47,12 +47,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="T0m-IY-dHY" firstAttribute="top" secondItem="0qB-NO-EMs" secondAttribute="bottom" constant="8" id="9p2-LI-zLE"/>
+                            <constraint firstItem="LET-Wa-SFg" firstAttribute="leading" secondItem="a00-Fq-qON" secondAttribute="leading" constant="10" id="ERU-iS-ESd"/>
+                            <constraint firstItem="LET-Wa-SFg" firstAttribute="top" secondItem="a00-Fq-qON" secondAttribute="top" constant="10" id="F3c-v4-JBP"/>
                             <constraint firstItem="T0m-IY-dHY" firstAttribute="centerX" secondItem="a00-Fq-qON" secondAttribute="centerX" id="O91-N8-KRK"/>
                             <constraint firstAttribute="bottom" secondItem="T0m-IY-dHY" secondAttribute="bottom" constant="5" id="Phc-NV-bTx"/>
                             <constraint firstItem="0qB-NO-EMs" firstAttribute="centerX" secondItem="a00-Fq-qON" secondAttribute="centerX" id="WgS-1R-ynL"/>
                             <constraint firstItem="0qB-NO-EMs" firstAttribute="top" secondItem="a00-Fq-qON" secondAttribute="top" constant="25" id="gLb-Px-t6A"/>
-                            <constraint firstItem="LET-Wa-SFg" firstAttribute="top" secondItem="a00-Fq-qON" secondAttribute="top" constant="5" id="lDA-hP-BOM"/>
-                            <constraint firstItem="LET-Wa-SFg" firstAttribute="leading" secondItem="a00-Fq-qON" secondAttribute="leading" constant="5" id="vAK-Tv-1eK"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

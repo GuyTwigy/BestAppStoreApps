@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="999" y="-205"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar-->
         <scene sceneID="SXg-2B-7xA">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ctV-Bk-ku5" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ctV-Bk-ku5" customClass="MainTabBar" customModule="BestAppStoreApps" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rRX-P7-6xo">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

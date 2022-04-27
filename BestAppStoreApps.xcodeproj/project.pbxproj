@@ -26,6 +26,7 @@
 		9D441A01281821E7000BBCA9 /* FreeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D4419FF281821E7000BBCA9 /* FreeCell.xib */; };
 		9D441A0528188EED000BBCA9 /* FavCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D441A0328188EED000BBCA9 /* FavCell.swift */; };
 		9D441A0628188EED000BBCA9 /* FavCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D441A0428188EED000BBCA9 /* FavCell.xib */; };
+		9DC5CC2B281931DB00B59DEC /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CC2A281931DB00B59DEC /* MainTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		9D4419FF281821E7000BBCA9 /* FreeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FreeCell.xib; sourceTree = "<group>"; };
 		9D441A0328188EED000BBCA9 /* FavCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCell.swift; sourceTree = "<group>"; };
 		9D441A0428188EED000BBCA9 /* FavCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavCell.xib; sourceTree = "<group>"; };
+		9DC5CC2A281931DB00B59DEC /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				9D2803712815E9260080A446 /* AppDelegate.swift */,
 				9D2803732815E9260080A446 /* SceneDelegate.swift */,
 				9D2803772815E9260080A446 /* Main.storyboard */,
+				9DC5CC2A281931DB00B59DEC /* MainTabBar.swift */,
 				9D2803752815E9260080A446 /* HomeViewController.swift */,
 				9D06307B28174256006FA54C /* FavoritesViewController.swift */,
 				9D06308A28175FD9006FA54C /* Extensions */,
@@ -230,6 +233,7 @@
 			files = (
 				9D06308928175F7D006FA54C /* ExtensionUIViewController.swift in Sources */,
 				9D06308028174632006FA54C /* PaidCell.swift in Sources */,
+				9DC5CC2B281931DB00B59DEC /* MainTabBar.swift in Sources */,
 				9D28038A2815EC3E0080A446 /* FreeAndPaidAppsModel.swift in Sources */,
 				9D2803872815EB400080A446 /* NetworkManager.swift in Sources */,
 				9D2803762815E9260080A446 /* HomeViewController.swift in Sources */,

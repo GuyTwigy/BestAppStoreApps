@@ -13,6 +13,8 @@ protocol PaidCellDelegate {
 
 class PaidCell: UITableViewCell {
     
+// MARK: Properties & Outlets
+    
     static let nibName = "PaidCell"
     var paidArray: [Results] = []
     var favArray: [Results] = []
@@ -24,6 +26,8 @@ class PaidCell: UITableViewCell {
     @IBOutlet weak var appImageView: UIImageView!
     @IBOutlet weak var buttonImageView: UIImageView!
     
+// MARK: Methods
+    
     func updateCellContent() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(favoriteTapped))
         buttonImageView.addGestureRecognizer(tap)
@@ -33,19 +37,17 @@ class PaidCell: UITableViewCell {
     }
 
     func animationForFavotite() {
-        UIView.animate(withDuration: 1, delay: 0.1, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
             self.buttonImageView.image = (UIImage(named: "purple_heart"))
             self.buttonImageView.transform = CGAffineTransform(rotationAngle: .pi)
         }) { _ in
-            UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {
-                self.buttonImageView.alpha = 0.1
+            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
                 self.buttonImageView.transform = .identity
             }) { _ in
-                UIView.animate(withDuration: 1.5, delay: 1, options: .curveEaseIn, animations: {
-                    self.buttonImageView.alpha = 1
-                    self.buttonImageView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+                UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
+                    self.buttonImageView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
                 }) { _ in
-                    UIView.animate(withDuration: 1.5, delay: 1, options: .curveEaseIn, animations: {
+                    UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
                         self.buttonImageView.transform = .identity
                     })
                 }
@@ -53,12 +55,13 @@ class PaidCell: UITableViewCell {
         }
     }
     
+// MARK: Actions
+    
     @objc func favoriteTapped() {
         if isFavorite {
             buttonImageView.image = (UIImage(named: "empty_heart"))
             delegate?.passDataPaid(index: index, remove: true)
         } else {
-//            animationForFavotite()
             animationForFavotite()
             delegate?.passDataPaid(index: index, remove: false)
         }
