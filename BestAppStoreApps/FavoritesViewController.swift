@@ -41,14 +41,6 @@ class FavoritesViewController: UIViewController {
         arrayEmptyIndicationLabel.isHidden = !favArray.isEmpty
     }
     
-    func shareApp(urlString: String) {
-        if let shareURL = NSURL(string: urlString), let shareData = NSData(contentsOf: shareURL as URL) {
-            let firstActivityItem: Array = [shareData]
-            let activityViewController = UIActivityViewController(activityItems: firstActivityItem, applicationActivities: nil)
-            present(activityViewController, animated: true, completion: nil)
-        }
-    }
-    
 // MARK: Actions
     
     @IBAction func removeAllTapped(_ sender: Any) {
@@ -85,10 +77,6 @@ extension FavoritesViewController: UICollectionViewDelegate, UICollectionViewDat
         let width = (view.frame.width) / 2.2
         return CGSize(width: width, height: width)
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        shareApp(urlString: favArray[indexPath.row].url)
-    }
 }
 
 extension FavoritesViewController: FavCellDelegate {
@@ -99,5 +87,3 @@ extension FavoritesViewController: FavCellDelegate {
         showHideEmptyLabel()
     }
 }
-
-

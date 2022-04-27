@@ -87,14 +87,6 @@ class HomeViewController: UIViewController {
             }
         }
     }
-    
-    func shareApp(urlString: String) {
-        if let shareURL = NSURL(string: urlString), let shareData = NSData(contentsOf: shareURL as URL) {
-            let firstActivityItem: Array = [shareData]
-            let activityViewController = UIActivityViewController(activityItems: firstActivityItem, applicationActivities: nil)
-            present(activityViewController, animated: true, completion: nil)
-        }
-    }
 }
 
 // MARK: Free Apps collectionView
@@ -116,17 +108,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         } else {
             cell.favoriteImage.image = (UIImage(named: "empty_heart"))
         }
-        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (view.frame.width) / 1.5
         return CGSize(width: width, height: width)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        shareApp(urlString: freeAppsArray[indexPath.row].url)
     }
 }
 
@@ -171,10 +158,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         cellHeight
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        shareApp(urlString: paidAppsArray[indexPath.row].url)
     }
 }
 
