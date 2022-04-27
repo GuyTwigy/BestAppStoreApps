@@ -52,12 +52,16 @@ class FavoritesViewController: UIViewController {
 // MARK: Actions
     
     @IBAction func removeAllTapped(_ sender: Any) {
-        presentAlertWithAction(withTitle: "Are you sure??", message: "By tapping OK all the items will be cleared.", complition: {
-            self.favArray.removeAll()
-            UserDefaults.standard.favListSave = self.favArray
-            self.collectionView.reloadData()
-            self.showHideEmptyLabel()
-        })
+        if favArray.isEmpty {
+            presentAlert(withTitle: "Favorite List Is empty", message: "Nothing to remove")
+        } else {
+            presentAlertWithAction(withTitle: "Are you sure??", message: "By tapping OK all the items will be cleared.", complition: {
+                self.favArray.removeAll()
+                UserDefaults.standard.favListSave = self.favArray
+                self.collectionView.reloadData()
+                self.showHideEmptyLabel()
+            })
+        }
     }
 }
 
