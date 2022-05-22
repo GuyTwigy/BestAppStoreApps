@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F5048e" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Family" representedClassName=".Family" syncable="YES">
+        <attribute name="familyName" optional="YES" attributeType="String"/>
+        <relationship name="person" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="family" inverseEntity="Person"/>
+    </entity>
+    <entity name="FeedCoreData" representedClassName="FeedCoreData" syncable="YES">
+        <relationship name="resultCoreData" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ResultCoreData"/>
+    </entity>
+    <entity name="Person" representedClassName=".Person" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="yearOld" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="family" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Family" inverseName="person" inverseEntity="Family"/>
+    </entity>
+    <entity name="ResponsePaidAppsCoreData" representedClassName="ResponsePaidAppsCoreData" syncable="YES">
+        <relationship name="feedCoreData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FeedCoreData"/>
+    </entity>
+    <entity name="ResultCoreData" representedClassName="ResultCoreData" syncable="YES">
+        <attribute name="artworkUrl100" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="ResponsePaidAppsCoreData" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="FeedCoreData" positionX="-63" positionY="-9" width="128" height="44"/>
+        <element name="ResultCoreData" positionX="-54" positionY="0" width="128" height="74"/>
+        <element name="Person" positionX="-27" positionY="45" width="128" height="74"/>
+        <element name="Family" positionX="-9" positionY="63" width="128" height="59"/>
+    </elements>
+</model>

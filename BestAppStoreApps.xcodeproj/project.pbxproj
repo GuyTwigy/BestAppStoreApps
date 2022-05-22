@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CA835D3C03A027B41C9048C /* Pods_BestAppStoreApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42458E318D726897048B35A1 /* Pods_BestAppStoreApps.framework */; };
 		9D06307C28174256006FA54C /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D06307B28174256006FA54C /* FavoritesViewController.swift */; };
 		9D06308028174632006FA54C /* PaidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D06307E28174632006FA54C /* PaidCell.swift */; };
 		9D06308128174632006FA54C /* PaidCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D06307F28174632006FA54C /* PaidCell.xib */; };
@@ -26,10 +27,25 @@
 		9D441A01281821E7000BBCA9 /* FreeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D4419FF281821E7000BBCA9 /* FreeCell.xib */; };
 		9D441A0528188EED000BBCA9 /* FavCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D441A0328188EED000BBCA9 /* FavCell.swift */; };
 		9D441A0628188EED000BBCA9 /* FavCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D441A0428188EED000BBCA9 /* FavCell.xib */; };
+		9D4AC086283146D700B92606 /* CellTapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4AC084283146D700B92606 /* CellTapViewController.swift */; };
+		9D4AC087283146D700B92606 /* CellTapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D4AC085283146D700B92606 /* CellTapViewController.xib */; };
+		9D4AC08A283147E000B92606 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D4AC088283147E000B92606 /* CoreData.xcdatamodeld */; };
+		9D88ACF9283195D60045DADD /* ResultCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D88ACF3283195D60045DADD /* ResultCoreData+CoreDataClass.swift */; };
+		9D88ACFA283195D60045DADD /* ResultCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D88ACF4283195D60045DADD /* ResultCoreData+CoreDataProperties.swift */; };
+		9D88ACFB283195D60045DADD /* ResponsePaidAppsCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D88ACF5283195D60045DADD /* ResponsePaidAppsCoreData+CoreDataClass.swift */; };
+		9D88ACFC283195D60045DADD /* ResponsePaidAppsCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D88ACF6283195D60045DADD /* ResponsePaidAppsCoreData+CoreDataProperties.swift */; };
+		9D88ACFD283195D60045DADD /* FeedCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D88ACF7283195D60045DADD /* FeedCoreData+CoreDataClass.swift */; };
+		9D88ACFE283195D60045DADD /* FeedCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D88ACF8283195D60045DADD /* FeedCoreData+CoreDataProperties.swift */; };
+		9D88AD03283275DC0045DADD /* Family+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D88ACFF283275DC0045DADD /* Family+CoreDataClass.swift */; };
+		9D88AD04283275DC0045DADD /* Family+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D88AD00283275DC0045DADD /* Family+CoreDataProperties.swift */; };
+		9D88AD05283275DC0045DADD /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D88AD01283275DC0045DADD /* Person+CoreDataClass.swift */; };
+		9D88AD06283275DC0045DADD /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D88AD02283275DC0045DADD /* Person+CoreDataProperties.swift */; };
+		9D88AD08283440E40045DADD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D88AD07283440E40045DADD /* GoogleService-Info.plist */; };
 		9DC5CC2B281931DB00B59DEC /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CC2A281931DB00B59DEC /* MainTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42458E318D726897048B35A1 /* Pods_BestAppStoreApps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestAppStoreApps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D06307B28174256006FA54C /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		9D06307E28174632006FA54C /* PaidCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidCell.swift; sourceTree = "<group>"; };
 		9D06307F28174632006FA54C /* PaidCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaidCell.xib; sourceTree = "<group>"; };
@@ -51,7 +67,23 @@
 		9D4419FF281821E7000BBCA9 /* FreeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FreeCell.xib; sourceTree = "<group>"; };
 		9D441A0328188EED000BBCA9 /* FavCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCell.swift; sourceTree = "<group>"; };
 		9D441A0428188EED000BBCA9 /* FavCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavCell.xib; sourceTree = "<group>"; };
+		9D4AC084283146D700B92606 /* CellTapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTapViewController.swift; sourceTree = "<group>"; };
+		9D4AC085283146D700B92606 /* CellTapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellTapViewController.xib; sourceTree = "<group>"; };
+		9D4AC089283147E000B92606 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		9D88ACF3283195D60045DADD /* ResultCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResultCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		9D88ACF4283195D60045DADD /* ResultCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResultCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		9D88ACF5283195D60045DADD /* ResponsePaidAppsCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponsePaidAppsCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		9D88ACF6283195D60045DADD /* ResponsePaidAppsCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponsePaidAppsCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		9D88ACF7283195D60045DADD /* FeedCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedCoreData+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		9D88ACF8283195D60045DADD /* FeedCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedCoreData+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		9D88ACFF283275DC0045DADD /* Family+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Family+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		9D88AD00283275DC0045DADD /* Family+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Family+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		9D88AD01283275DC0045DADD /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		9D88AD02283275DC0045DADD /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		9D88AD07283440E40045DADD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9DC5CC2A281931DB00B59DEC /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		AF800F6581F727EC16D20723 /* Pods-BestAppStoreApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestAppStoreApps.debug.xcconfig"; path = "Target Support Files/Pods-BestAppStoreApps/Pods-BestAppStoreApps.debug.xcconfig"; sourceTree = "<group>"; };
+		DB9A6907DFB41A683C40EDD5 /* Pods-BestAppStoreApps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestAppStoreApps.release.xcconfig"; path = "Target Support Files/Pods-BestAppStoreApps/Pods-BestAppStoreApps.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +91,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA835D3C03A027B41C9048C /* Pods_BestAppStoreApps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41B633FF48652212A696A4D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42458E318D726897048B35A1 /* Pods_BestAppStoreApps.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9D06307D281745F2006FA54C /* PaidCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +131,8 @@
 			children = (
 				9D2803702815E9260080A446 /* BestAppStoreApps */,
 				9D28036F2815E9260080A446 /* Products */,
+				D8E5BB857BD4FB7ECAB00C8B /* Pods */,
+				41B633FF48652212A696A4D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +153,10 @@
 				9DC5CC2A281931DB00B59DEC /* MainTabBar.swift */,
 				9D2803752815E9260080A446 /* HomeViewController.swift */,
 				9D06307B28174256006FA54C /* FavoritesViewController.swift */,
+				9D4AC084283146D700B92606 /* CellTapViewController.swift */,
+				9D4AC085283146D700B92606 /* CellTapViewController.xib */,
+				9D88AD07283440E40045DADD /* GoogleService-Info.plist */,
+				9D88ACE628314B2E0045DADD /* CoreData */,
 				9D06308A28175FD9006FA54C /* Extensions */,
 				9D2803882815EC060080A446 /* Models */,
 				9D2803852815EB200080A446 /* NetworkManager */,
@@ -157,6 +204,33 @@
 			path = FavCell;
 			sourceTree = "<group>";
 		};
+		9D88ACE628314B2E0045DADD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				9D88ACFF283275DC0045DADD /* Family+CoreDataClass.swift */,
+				9D88AD00283275DC0045DADD /* Family+CoreDataProperties.swift */,
+				9D88AD01283275DC0045DADD /* Person+CoreDataClass.swift */,
+				9D88AD02283275DC0045DADD /* Person+CoreDataProperties.swift */,
+				9D88ACF5283195D60045DADD /* ResponsePaidAppsCoreData+CoreDataClass.swift */,
+				9D88ACF6283195D60045DADD /* ResponsePaidAppsCoreData+CoreDataProperties.swift */,
+				9D88ACF7283195D60045DADD /* FeedCoreData+CoreDataClass.swift */,
+				9D88ACF8283195D60045DADD /* FeedCoreData+CoreDataProperties.swift */,
+				9D88ACF3283195D60045DADD /* ResultCoreData+CoreDataClass.swift */,
+				9D88ACF4283195D60045DADD /* ResultCoreData+CoreDataProperties.swift */,
+				9D4AC088283147E000B92606 /* CoreData.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		D8E5BB857BD4FB7ECAB00C8B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF800F6581F727EC16D20723 /* Pods-BestAppStoreApps.debug.xcconfig */,
+				DB9A6907DFB41A683C40EDD5 /* Pods-BestAppStoreApps.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D2803822815E9270080A446 /* Build configuration list for PBXNativeTarget "BestAppStoreApps" */;
 			buildPhases = (
+				6B7B035517007F540F687DEB /* [CP] Check Pods Manifest.lock */,
 				9D28036A2815E9260080A446 /* Sources */,
 				9D28036B2815E9260080A446 /* Frameworks */,
 				9D28036C2815E9260080A446 /* Resources */,
+				3A46332C36D71FF7934473F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,8 +292,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D28037E2815E9270080A446 /* LaunchScreen.storyboard in Resources */,
+				9D88AD08283440E40045DADD /* GoogleService-Info.plist in Resources */,
 				9D441A0628188EED000BBCA9 /* FavCell.xib in Resources */,
 				9D441A01281821E7000BBCA9 /* FreeCell.xib in Resources */,
+				9D4AC087283146D700B92606 /* CellTapViewController.xib in Resources */,
 				9D28037B2815E9270080A446 /* Assets.xcassets in Resources */,
 				9D2803792815E9260080A446 /* Main.storyboard in Resources */,
 				9D06308128174632006FA54C /* PaidCell.xib in Resources */,
@@ -226,24 +304,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A46332C36D71FF7934473F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BestAppStoreApps/Pods-BestAppStoreApps-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BestAppStoreApps/Pods-BestAppStoreApps-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BestAppStoreApps/Pods-BestAppStoreApps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B7B035517007F540F687DEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BestAppStoreApps-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9D28036A2815E9260080A446 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4AC08A283147E000B92606 /* CoreData.xcdatamodeld in Sources */,
 				9D06308928175F7D006FA54C /* ExtensionUIViewController.swift in Sources */,
 				9D06308028174632006FA54C /* PaidCell.swift in Sources */,
 				9DC5CC2B281931DB00B59DEC /* MainTabBar.swift in Sources */,
+				9D88ACFB283195D60045DADD /* ResponsePaidAppsCoreData+CoreDataClass.swift in Sources */,
 				9D28038A2815EC3E0080A446 /* FreeAndPaidAppsModel.swift in Sources */,
+				9D88AD03283275DC0045DADD /* Family+CoreDataClass.swift in Sources */,
 				9D2803872815EB400080A446 /* NetworkManager.swift in Sources */,
+				9D88ACFC283195D60045DADD /* ResponsePaidAppsCoreData+CoreDataProperties.swift in Sources */,
 				9D2803762815E9260080A446 /* HomeViewController.swift in Sources */,
+				9D88AD06283275DC0045DADD /* Person+CoreDataProperties.swift in Sources */,
 				9D2803722815E9260080A446 /* AppDelegate.swift in Sources */,
 				9D06307C28174256006FA54C /* FavoritesViewController.swift in Sources */,
+				9D88ACFA283195D60045DADD /* ResultCoreData+CoreDataProperties.swift in Sources */,
 				9D06308728175E54006FA54C /* ExtensionUserDefault.swift in Sources */,
 				9D0630852817471C006FA54C /* ExtensionUIImage.swift in Sources */,
+				9D88AD04283275DC0045DADD /* Family+CoreDataProperties.swift in Sources */,
+				9D88ACFE283195D60045DADD /* FeedCoreData+CoreDataProperties.swift in Sources */,
+				9D88AD05283275DC0045DADD /* Person+CoreDataClass.swift in Sources */,
 				9D441A0528188EED000BBCA9 /* FavCell.swift in Sources */,
+				9D88ACF9283195D60045DADD /* ResultCoreData+CoreDataClass.swift in Sources */,
 				9D063083281746ED006FA54C /* ExtensionUIView.swift in Sources */,
 				9D2803742815E9260080A446 /* SceneDelegate.swift in Sources */,
+				9D88ACFD283195D60045DADD /* FeedCoreData+CoreDataClass.swift in Sources */,
+				9D4AC086283146D700B92606 /* CellTapViewController.swift in Sources */,
 				9D441A00281821E7000BBCA9 /* FreeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +520,7 @@
 		};
 		9D2803832815E9270080A446 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF800F6581F727EC16D20723 /* Pods-BestAppStoreApps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -416,6 +549,7 @@
 		};
 		9D2803842815E9270080A446 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB9A6907DFB41A683C40EDD5 /* Pods-BestAppStoreApps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -464,6 +598,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9D4AC088283147E000B92606 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9D4AC089283147E000B92606 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = 9D4AC089283147E000B92606 /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9D2803662815E9250080A446 /* Project object */;
 }

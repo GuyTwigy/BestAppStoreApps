@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="BestAppStoreApps" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Free Apps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktp-i3-diH">
-                                <rect key="frame" x="30" y="74" width="364" height="33"/>
+                                <rect key="frame" x="30" y="118" width="364" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gx7-eA-txR">
-                                <rect key="frame" x="5" y="127" width="409" height="180"/>
+                                <rect key="frame" x="5" y="171" width="409" height="180"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qGv-O4-Qi9">
                                         <rect key="frame" x="0.0" y="0.0" width="409" height="180"/>
@@ -55,17 +55,17 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Paid Apps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ra6-b5-5uf">
-                                <rect key="frame" x="30" y="357" width="364" height="33"/>
+                                <rect key="frame" x="30" y="401" width="364" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ywu-cX-NJ5">
-                                <rect key="frame" x="0.0" y="410" width="414" height="403"/>
+                                <rect key="frame" x="0.0" y="454" width="414" height="359"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="3qJ-AY-SEM">
-                                <rect key="frame" x="188.5" y="593" width="37" height="37"/>
+                                <rect key="frame" x="188.5" y="615" width="37" height="37"/>
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -94,10 +94,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ktp-i3-diH" secondAttribute="trailing" constant="20" id="upE-8V-7mq"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="l6W-f3-cRg">
-                        <imageReference key="image" image="house" catalog="system" symbolScale="large"/>
-                        <color key="badgeColor" systemColor="systemYellowColor"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="OM5-P6-2iD"/>
                     <connections>
                         <outlet property="carouselView" destination="gx7-eA-txR" id="eFt-cT-83d"/>
                         <outlet property="collectionView" destination="qGv-O4-Qi9" id="SKk-Y8-VE3"/>
@@ -108,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="999" y="-205"/>
+            <point key="canvasLocation" x="1908.6956521739132" y="-205.58035714285714"/>
         </scene>
         <!--Main Tab Bar-->
         <scene sceneID="SXg-2B-7xA">
@@ -121,7 +118,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6aB-RN-WZn"/>
+                        <segue destination="6Mq-Hb-Cgx" kind="relationship" relationship="viewControllers" id="6aB-RN-WZn"/>
                         <segue destination="X3z-N7-6hE" kind="relationship" relationship="viewControllers" id="kdY-xc-hab"/>
                     </connections>
                 </tabBarController>
@@ -220,6 +217,28 @@ Go ahead and fill it.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2O2-ru-KaI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="998.55072463768124" y="479.46428571428567"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="wfz-aM-cwJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Mq-Hb-Cgx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="l6W-f3-cRg">
+                        <imageReference key="image" image="house" catalog="system" symbolScale="large"/>
+                        <color key="badgeColor" systemColor="systemYellowColor"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zHg-Vf-MwJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xIt-Qk-Zh0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eki-qz-PKR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998.55072463768124" y="-205.58035714285714"/>
         </scene>
     </scenes>
     <resources>

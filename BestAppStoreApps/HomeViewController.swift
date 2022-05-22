@@ -16,6 +16,9 @@ class HomeViewController: UIViewController {
     var favArray: [Results] = []
     var cellHeight = 80.0
     
+    var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    lazy var context = appDelegate.persistentContainer.viewContext
+    
 // MARK: Outlets
     
     @IBOutlet weak var carouselView: UIView!
@@ -111,6 +114,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = CellTapViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (view.frame.width) / 1.5
         return CGSize(width: width, height: width)
@@ -154,6 +162,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             cell.buttonImageView.image = (UIImage(named: "empty_heart"))
         }
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = CellTapViewController()
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
