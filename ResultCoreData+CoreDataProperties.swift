@@ -23,7 +23,8 @@ extension ResultCoreData {
     
     func setInfo(result:Results) {
         self.name = result.name
-        self.artworkUrl100 = 
+        self.artworkUrl100 = result.artworkUrl100
+        self.url = result.url
     }
 }
 
