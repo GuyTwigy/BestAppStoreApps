@@ -14,7 +14,7 @@ class NetworkManager {
     
     func getFreeApps(callBack: @escaping (Bool, [Results]?) -> Void) {
         
-        let freeAppsEndPoint = "/api/v2/us/apps/top-free/10/apps.json"
+        let freeAppsEndPoint = "/api/v2/us/apps/top-free/25/apps.json"
         let freeAppsApi = baseUrl + freeAppsEndPoint
         
         guard let url = URL(string: freeAppsApi) else {
@@ -64,29 +64,29 @@ class NetworkManager {
         task.resume()
     }
     
-    func getCoreDataPaidApps(callBack: @escaping (Bool, [ResultCoreData]?) -> Void) {
-
-        let freeAppsEndPoint = "/api/v2/us/apps/top-free/10/apps.json"
-        let freeAppsApi = baseUrl + freeAppsEndPoint
-
-        guard let url = URL(string: freeAppsApi) else {
-            print("Failed load Free Apps List")
-            return callBack(false, nil)
-        }
-
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let data = data, error == nil else {
-                print("Failed load Free Apps List")
-                return callBack(false, nil)
-            }
-            do {
-                let response = try JSONDecoder().decode(ResponsePaidAppsCoreData.self, from: data)
-                callBack(true, response.feedCoreData?.resultCoreData)
-            } catch {
-                print("Failed load Free Apps List")
-                callBack(false, nil)
-            }
-        }
-        task.resume()
-    }
+//    func getCoreDataPaidApps(callBack: @escaping (Bool, [ResultCoreData]?) -> Void) {
+//
+//        let freeAppsEndPoint = "/api/v2/us/apps/top-free/10/apps.json"
+//        let freeAppsApi = baseUrl + freeAppsEndPoint
+//
+//        guard let url = URL(string: freeAppsApi) else {
+//            print("Failed load Free Apps List")
+//            return callBack(false, nil)
+//        }
+//
+//        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+//            guard let data = data, error == nil else {
+//                print("Failed load Free Apps List")
+//                return callBack(false, nil)
+//            }
+//            do {
+//                let response = try JSONDecoder().decode(ResponsePaidAppsCoreData.self, from: data)
+//                callBack(true, response.feedCoreData?.resultCoreData)
+//            } catch {
+//                print("Failed load Free Apps List")
+//                callBack(false, nil)
+//            }
+//        }
+//        task.resume()
+//    }
 }
