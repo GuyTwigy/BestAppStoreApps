@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.6.0)
   - FirebaseAnalytics (8.15.0):
     - FirebaseAnalytics/AdIdSupport (= 8.15.0)
     - FirebaseCore (~> 8.0)
@@ -91,11 +92,13 @@ PODS:
   - PromisesObjC (2.1.0)
 
 DEPENDENCIES:
+  - Alamofire
   - FirebaseAnalytics
   - FirebaseMessaging
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - FirebaseAnalytics
     - FirebaseCore
     - FirebaseCoreDiagnostics
@@ -108,6 +111,7 @@ SPEC REPOS:
     - PromisesObjC
 
 SPEC CHECKSUMS:
+  Alamofire: 0c07058209f211e3d32824f8e0766d7c44ac83b3
   FirebaseAnalytics: 7761cbadb00a717d8d0939363eb46041526474fa
   FirebaseCore: 5743c5785c074a794d35f2fff7ecc254a91e08b1
   FirebaseCoreDiagnostics: 92e07a649aeb66352b319d43bdd2ee3942af84cb
@@ -119,6 +123,6 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
 
-PODFILE CHECKSUM: 227b0442365da2bc1d166df4a4688d0c1c84f6e4
+PODFILE CHECKSUM: 2901024c77756d3aeffd90c1f8f25e37f130d6bc
 
 COCOAPODS: 1.11.3

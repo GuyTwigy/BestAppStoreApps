@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class NetworkManager {
     
@@ -64,10 +65,13 @@ class NetworkManager {
         task.resume()
     }
     
-    func getCoreDataPaidApps(callBack: @escaping (Bool, [ResultCoreData]?) -> Void) {
+    func getAlmoFirePaidApps(callBack: @escaping (Bool, [ResultCoreData]?) -> Void) {
 
         let freeAppsEndPoint = "/api/v2/us/apps/top-free/10/apps.json"
         let freeAppsApi = baseUrl + freeAppsEndPoint
+
+        
+
 
         guard let url = URL(string: freeAppsApi) else {
             print("Failed load Free Apps List")

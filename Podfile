@@ -9,4 +9,5 @@ target 'BestAppStoreApps' do
 
 pod 'FirebaseAnalytics'
 pod 'FirebaseMessaging'
+pod 'Alamofire'
 end
